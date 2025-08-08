@@ -1,5 +1,3 @@
-// anime.js - API de anime básica
-
 async function buscarAnime() {
     const query = document.getElementById('animeQuery').value.trim();
     const type = document.getElementById('animeType').value;

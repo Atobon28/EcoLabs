@@ -1,5 +1,3 @@
-// pais.js - API de países básica
-
 async function buscarPais() {
     mostrarCarga('paisResult');
     

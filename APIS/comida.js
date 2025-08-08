@@ -1,5 +1,3 @@
-// comida.js - API de comidas básica
-
 async function buscarComida() {
     mostrarCarga('comidaResult');
     

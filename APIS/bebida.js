@@ -1,5 +1,3 @@
-// bebida.js - API de bebidas básica
-
 async function buscarBebida() {
     mostrarCarga('bebidaResult');
     
