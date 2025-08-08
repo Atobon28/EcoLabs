@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lab 1</h1>
+
+        <div class="apis-grid">
+            <div class="api-card">
+                <h2>Comidas del Mundo</h2>
+                <p>Platos típicos de cada región</p>
+                <button onclick="buscarComida()">Buscar Comida</button>
+                <div class="result-area" id="comidaResult">
+                    <p>Haz clic para obtener un plato aleatorio</p>
+                </div>
+            </div>
+
+            <div class="api-card">
+                <h2>Cócteles</h2>
+                <p>Cócteles y bebidas</p>
+                <button onclick="buscarBebida()">Buscar Bebida</button>
+                <div class="result-area" id="bebidaResult">
+                    <p>Haz clic para obtener una bebida aleatoria</p>
+                </div>
+            </div>
+
+            <div class="api-card">
+                <h2>Información de Países</h2>
+                <p>Datos de países del mundo</p>
+                <button onclick="buscarPais()">Buscar País</button>
+                <div class="result-area" id="paisResult">
+                    <p>Haz clic para obtener un país aleatorio</p>
+                </div>
+            </div>
+
+            <div class="api-card anime-full-width">
+                <h2>Búsqueda de Anime</h2>
+                <p>Encuentra tu anime favorito</p>
+                <div class="anime-form">
+                    <input type="text" id="animeQuery" placeholder="Nombre del anime" required>
+                    <select id="animeType">
+                        <option value="">Todos</option>
+                        <option value="tv">TV</option>
+                        <option value="movie">Película</option>
+                        <option value="ova">OVA</option>
+                    </select>
+                    <input type="number" id="animeLimit" placeholder="Límite" min="1" max="10" value="5">
+                    <button onclick="buscarAnime()">Buscar Anime</button>
+                </div>
+                <div class="result-area" id="animeResult">
+                    <p>Ingresa el nombre de un anime para buscar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/EcoLabs/APIS/comida.js"></script>
+    <script src="/EcoLabs/APIS/bebida.js"></script>
+    <script src="/EcoLabs/APIS/pais.js"></script>
+    <script src="/EcoLabs/APIS/anime.js"></script>
+    <script src="/EcoLabs/APIS/main.js"></script>
+</body>
+</html>
