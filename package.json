@@ -1,0 +1,24 @@
+{
+  "name": "ecolabs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atobon28/EcoLabs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atobon28/EcoLabs/issues"
+  },
+  "homepage": "https://github.com/Atobon28/EcoLabs#readme",
+  "description": "",
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.3",
+    "live-server": "^1.2.2"
+  }
+}
