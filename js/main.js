@@ -52,30 +52,9 @@ function setupForm() {
             form.reset();
             
             alert('Post creado!');
-            scrollToPosts();
             
         } catch (error) {
             alert('Error al crear post');
         }
     });
-}
-
-// Eliminar post
-async function handleDelete(id) {
-    if (confirm('¿Eliminar este post?')) {
-        try {
-            await deletePost(id);
-            
-            // Quitar de la lista
-            allPosts = allPosts.filter(post => post.id !== id);
-            
-            // Mostrar posts actualizados
-            showAllPosts(allPosts);
-            
-            alert('Post eliminado');
-            
-        } catch (error) {
-            alert('Error al eliminar');
-        }
-    }
 }

@@ -1,4 +1,3 @@
-// Crear una tarjeta de post
 function createPostCard(post) {
     return `
         <div class="post-card">
@@ -12,7 +11,6 @@ function createPostCard(post) {
     `;
 }
 
-// Mostrar todos los posts
 function showAllPosts(posts) {
     const container = document.getElementById('postsContainer');
     const loading = document.getElementById('loading');
@@ -20,11 +18,7 @@ function showAllPosts(posts) {
     loading.style.display = 'none';
     
     if (posts.length === 0) {
-        container.innerHTML = `
-            <div style="text-align: center; grid-column: 1/-1; padding: 40px; color: #666;">
-                <h3>No hay posts disponibles</h3>
-            </div>
-        `;
+        container.innerHTML = '<div style="text-align: center; padding: 40px; color: #666;"><h3>No hay posts disponibles</h3></div>';
         return;
     }
     
@@ -36,7 +30,6 @@ function showAllPosts(posts) {
     container.innerHTML = html;
 }
 
-// Mostrar mensaje de error
 function showError(message) {
     const loading = document.getElementById('loading');
     const error = document.getElementById('error');
@@ -44,4 +37,18 @@ function showError(message) {
     loading.style.display = 'none';
     error.textContent = message;
     error.style.display = 'block';
+}
+
+async function handleDelete(id) {
+    if (confirm('Eliminar este post?')) {
+        try {
+            await deletePost(id);
+            // FIX: Convertir id a número para la comparación
+            allPosts = allPosts.filter(post => post.id !== Number(id));
+            showAllPosts(allPosts);
+            alert('Post eliminado');
+        } catch (error) {
+            alert('Error al eliminar');
+        }
+    }
 }
