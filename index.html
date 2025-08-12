@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching GET, POST, DELETE</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fetching <span class="highlight">GET, POST, DELETE</span></h1>
+        </header>
+
+        <section class="create-section">
+            <div class="create-form">
+                <h2>CREATE POST</h2>
+                <form id="postForm">
+                    <input type="text" id="imageUrl" placeholder="URL de la foto" required>
+                    <input type="text" id="title" placeholder="Título" required>
+                    <textarea id="description" placeholder="Descripción" required></textarea>
+                    <button type="submit" class="create-btn">Create POST</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="posts-section">
+            <div class="posts-header">
+                <h2>POSTS</h2>
+                <button class="refresh-btn" onclick="loadPosts()">Actualizar</button>
+            </div>
+            <div id="postsContainer" class="posts-grid">
+            </div>
+            <div id="loading" class="loading">Loading posts...</div>
+            <div id="error" class="error" style="display: none;"></div>
+        </section>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
