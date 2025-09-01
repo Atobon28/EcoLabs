@@ -27,10 +27,10 @@ app.use('/', express.static(path.join(__dirname, 'public')));
 let clientesRegistrados = [
     {
         id: 100,
-        nombreUsuario: 'cliente_demo',
-        clave: 'demo123',
-        nombreCompleto: 'María González',
-        correo: 'maria@correo.com',
+        nombreUsuario: 'Atobon28',
+        clave: 'ana123',
+        nombreCompleto: 'Ana Tobon',
+        correo: 'ana@correo.com',
         celular: '3101234567',
         fechaRegistro: new Date()
     }
