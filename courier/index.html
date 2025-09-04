@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- PANTALLA 1: LOGIN DE REPARTIDOR -->
+    <nav class="home-nav">
+        <a href="/EcoLabs/public/index.html" class="home-button">Inicio</a>
+    </nav>
+
     <div id="pantallaLogin" class="pantalla activa">
         <div class="contenedor">
             <div class="caja-login">
-                <h1 class="logo">🚗 Tobonsita Rappi</h1>
+                <h1 class="logo">Tobonsita Rappi</h1>
                 <h2>Panel de Repartidor</h2>
-                <p>Inicia sesión para ver tus órdenes disponibles</p>
+                <p>Accede para ver las órdenes disponibles y gestionar tus entregas</p>
                 
                 <form id="formularioLogin">
                     <div class="grupo-input">
@@ -32,45 +35,42 @@
                 <div id="mensajeLogin" class="mensaje"></div>
                 
                 <div class="ayuda-login">
-                    <p><strong>Usuario de prueba:</strong></p>
+                    <p>Usuario de prueba disponible:</p>
                     <p>delivery_juan / juan789</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- PANTALLA 2: DASHBOARD PRINCIPAL -->
     <div id="pantallaDashboard" class="pantalla">
         <div class="contenedor">
-            <!-- Encabezado -->
             <header class="encabezado-app">
                 <div class="info-usuario">
                     <h2 id="nombreRepartidor">Mi Dashboard</h2>
                     <p>Panel de control de entregas</p>
                 </div>
                 <div class="controles-encabezado">
-                    <span class="estado-repartidor" id="estadoRepartidor">Estado: Disponible 🟢</span>
+                    <span class="estado-repartidor" id="estadoRepartidor">Estado: Disponible</span>
                     <button id="botonCerrarSesion" class="boton-salir">Cerrar Sesión</button>
                 </div>
             </header>
 
-            <!-- Panel de opciones principales -->
             <div class="panel-opciones">
                 <div class="tarjeta-opcion">
-                    <h3>📋 Órdenes Disponibles</h3>
-                    <p>Ve todas las órdenes que puedes tomar</p>
+                    <h3>Órdenes Disponibles</h3>
+                    <p>Explora todas las órdenes que están esperando ser asignadas a un repartidor</p>
                     <button id="botonVerDisponibles" class="boton-principal">Ver Disponibles</button>
                 </div>
 
                 <div class="tarjeta-opcion">
-                    <h3>🎒 Mis Órdenes</h3>
-                    <p>Órdenes que tienes asignadas para entregar</p>
+                    <h3>Mis Órdenes</h3>
+                    <p>Gestiona las órdenes que tienes asignadas para entregar</p>
                     <button id="botonMisOrdenes" class="boton-secundario">Ver Mis Órdenes</button>
                 </div>
 
                 <div class="tarjeta-opcion">
-                    <h3>📊 Estado</h3>
-                    <p>Cambia tu disponibilidad para recibir órdenes</p>
+                    <h3>Mi Estado</h3>
+                    <p>Cambia tu disponibilidad para recibir nuevas asignaciones</p>
                     <button id="botonCambiarEstado" class="boton-secundario">Cambiar Estado</button>
                 </div>
             </div>
@@ -79,56 +79,51 @@
         </div>
     </div>
 
-    <!-- PANTALLA 3: ÓRDENES DISPONIBLES -->
     <div id="pantallaDisponibles" class="pantalla">
         <div class="contenedor">
             <header class="encabezado-app">
-                <button id="volverDashboard1" class="boton-volver">← Volver</button>
-                <h2>📋 Órdenes Disponibles</h2>
-                <button id="actualizarDisponibles" class="boton-actualizar">🔄 Actualizar</button>
+                <button id="volverDashboard1" class="boton-volver">Volver</button>
+                <h2>Órdenes Disponibles</h2>
+                <button id="actualizarDisponibles" class="boton-actualizar">Actualizar</button>
             </header>
 
             <div id="contenedorDisponibles" class="lista-ordenes">
-                <!-- Las órdenes disponibles se cargan aquí -->
             </div>
 
             <div id="mensajeDisponibles" class="mensaje"></div>
 
             <div id="sinDisponibles" class="estado-vacio" style="display: none;">
-                <p>😊 No hay órdenes disponibles</p>
+                <p>No hay órdenes disponibles</p>
                 <p>Cuando aparezcan nuevas órdenes las verás aquí</p>
             </div>
         </div>
     </div>
 
-    <!-- PANTALLA 4: MIS ÓRDENES ASIGNADAS -->
     <div id="pantallaMisOrdenes" class="pantalla">
         <div class="contenedor">
             <header class="encabezado-app">
-                <button id="volverDashboard2" class="boton-volver">← Volver</button>
-                <h2>🎒 Mis Órdenes</h2>
-                <button id="actualizarMisOrdenes" class="boton-actualizar">🔄 Actualizar</button>
+                <button id="volverDashboard2" class="boton-volver">Volver</button>
+                <h2>Mis Órdenes</h2>
+                <button id="actualizarMisOrdenes" class="boton-actualizar">Actualizar</button>
             </header>
 
             <div id="contenedorMisOrdenes" class="lista-ordenes">
-                <!-- Las órdenes asignadas se cargan aquí -->
             </div>
 
             <div id="mensajeMisOrdenes" class="mensaje"></div>
 
             <div id="sinMisOrdenes" class="estado-vacio" style="display: none;">
-                <p>📦 No tienes órdenes asignadas</p>
+                <p>No tienes órdenes asignadas</p>
                 <p>Acepta órdenes disponibles para comenzar a entregar</p>
             </div>
         </div>
     </div>
 
-    <!-- PANTALLA 5: DETALLES DE ORDEN -->
     <div id="pantallaDetalles" class="pantalla">
         <div class="contenedor">
             <header class="encabezado-app">
-                <button id="volverAtras" class="boton-volver">← Volver</button>
-                <h2>📄 Detalles de la Orden</h2>
+                <button id="volverAtras" class="boton-volver">Volver</button>
+                <h2>Detalles de la Orden</h2>
             </header>
 
             <div class="tarjeta-detalles">
@@ -138,29 +133,27 @@
                 </div>
 
                 <div class="info-cliente">
-                    <h4>👤 Información del Cliente</h4>
+                    <h4>Información del Cliente</h4>
                     <p id="nombreClienteDetalle">-</p>
-                    <p id="direccionClienteDetalle">📍 -</p>
+                    <p id="direccionClienteDetalle">-</p>
                 </div>
 
                 <div class="info-tienda">
-                    <h4>🏪 Información de la Tienda</h4>
+                    <h4>Información del Restaurante</h4>
                     <p id="nombreTiendaDetalle">-</p>
                 </div>
 
                 <div class="productos-detalle">
-                    <h4>🍕 Productos</h4>
+                    <h4>Productos</h4>
                     <div id="listaProductosDetalle">
-                        <!-- Los productos se cargan aquí -->
                     </div>
                 </div>
 
-                <div class="total-orden">
-                    <h4>💰 Total: $<span id="totalOrdenDetalle">0</span></h4>
+                <div class="total-orden-detalle">
+                    <h4>Total: $<span id="totalOrdenDetalle">0</span></h4>
                 </div>
 
                 <div class="acciones-detalle" id="accionesDetalle">
-                    <!-- Los botones aparecen según el estado -->
                 </div>
             </div>
 
@@ -168,13 +161,11 @@
         </div>
     </div>
 
-    <!-- OVERLAY DE CARGA -->
     <div id="overlayLoading" class="overlay-loading" style="display: none;">
         <div class="spinner-loading"></div>
         <p>Cargando...</p>
     </div>
 
-    <!-- JavaScript -->
     <script src="index.js"></script>
 </body>
 </html>

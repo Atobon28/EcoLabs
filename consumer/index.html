@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="/EcoLabs/consumer/styles.css">
 </head>
 <body>
-    <!-- PANTALLA 1: LOGIN -->
+    <nav class="home-nav">
+        <a href="/EcoLabs/public/index.html" class="home-button">Inicio</a>
+    </nav>
+
     <div id="loginScreen" class="screen active">
         <div class="container">
             <div class="login-box">
-                <h1>Bienvenido a Tobonsita Rappi</h1>
-                <p>Inicia sesión para pedir tu comida favorita</p>
+                <h1>Bienvenido</h1>
+                <p>Accede a tu cuenta para explorar los mejores sabores de la ciudad</p>
                 
                 <form id="loginForm">
                     <div class="input-group">
@@ -31,17 +34,18 @@
                 <div id="loginMessage" class="message"></div>
                 
                 <p class="help-text">
-                    ¿Nuevo usuario? Crea tu cuenta ingresando un usuario y contraseña nuevos
+                    <strong>¿Nuevo usuario?</strong><br>
+                    Crea tu cuenta ingresando un usuario y contraseña nuevos. 
+                    Te daremos la bienvenida automáticamente a nuestra comunidad gastronómica.
                 </p>
             </div>
         </div>
     </div>
 
-    <!-- PANTALLA 2: LISTA DE TIENDAS -->
     <div id="storesScreen" class="screen">
         <div class="container">
             <header class="app-header">
-                <h2>🏪 Tiendas Disponibles</h2>
+                <h2>Restaurantes Disponibles</h2>
                 <div class="user-info">
                     <span id="welcomeUser"></span>
                     <button id="viewOrdersBtn" class="btn-secondary">Mis Órdenes</button>
@@ -50,40 +54,36 @@
             </header>
             
             <div id="storesContainer" class="stores-grid">
-                <!-- Las tiendas se cargan aquí con JavaScript -->
             </div>
             
             <div id="storesMessage" class="message"></div>
         </div>
     </div>
 
-    <!-- PANTALLA 3: MENÚ DE PRODUCTOS -->
     <div id="menuScreen" class="screen">
         <div class="container">
             <header class="app-header">
-                <button id="backToStores" class="btn-back">← Volver</button>
+                <button id="backToStores" class="btn-back">Volver</button>
                 <h2 id="restaurantName">Menú</h2>
                 <button id="viewCartBtn" class="btn-cart">
-                    🛒 Carrito (<span id="cartCount">0</span>)
+                    Carrito (<span id="cartCount">0</span>)
                 </button>
             </header>
             
             <div id="restaurantInfo" class="restaurant-info"></div>
             
             <div id="productsContainer" class="products-grid">
-                <!-- Los productos se cargan aquí con JavaScript -->
             </div>
             
             <div id="menuMessage" class="message"></div>
         </div>
     </div>
 
-    <!-- PANTALLA 4: CARRITO DE COMPRAS -->
     <div id="cartScreen" class="screen">
         <div class="container">
             <header class="app-header">
-                <button id="backToMenu" class="btn-back">← Volver al Menú</button>
-                <h2>🛒 Mi Carrito</h2>
+                <button id="backToMenu" class="btn-back">Volver al Menú</button>
+                <h2>Mi Carrito</h2>
             </header>
             
             <div id="cartContainer">
@@ -101,18 +101,17 @@
                 
                 <div id="emptyCart" class="empty-state" style="display: none;">
                     <p>Tu carrito está vacío</p>
-                    <button id="backToStoresFromCart" class="btn-secondary">Ver Tiendas</button>
+                    <button id="backToStoresFromCart" class="btn-secondary">Ver Restaurantes</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- PANTALLA 5: MÉTODO DE PAGO Y DIRECCIÓN -->
     <div id="checkoutScreen" class="screen">
         <div class="container">
             <header class="app-header">
-                <button id="backToCart" class="btn-back">← Volver al Carrito</button>
-                <h2>📍 Información de Entrega</h2>
+                <button id="backToCart" class="btn-back">Volver al Carrito</button>
+                <h2>Información de Entrega</h2>
             </header>
             
             <form id="checkoutForm" class="checkout-form">
@@ -134,19 +133,19 @@
                     <div class="payment-methods">
                         <label class="payment-option">
                             <input type="radio" name="payment" value="efectivo" checked>
-                            <span class="payment-icon">💵</span>
+                            <span class="payment-icon">$</span>
                             Efectivo
                         </label>
                         
                         <label class="payment-option">
                             <input type="radio" name="payment" value="tarjeta">
-                            <span class="payment-icon">💳</span>
+                            <span class="payment-icon">♦</span>
                             Tarjeta
                         </label>
                         
                         <label class="payment-option">
                             <input type="radio" name="payment" value="pse">
-                            <span class="payment-icon">🏦</span>
+                            <span class="payment-icon">≡</span>
                             PSE
                         </label>
                     </div>
@@ -171,12 +170,11 @@
         </div>
     </div>
 
-    <!-- PANTALLA 6: CONFIRMACIÓN DE ORDEN -->
     <div id="confirmationScreen" class="screen">
         <div class="container">
             <div class="confirmation-box">
-                <div class="success-icon">✅</div>
-                <h2>¡Pedido Confirmado!</h2>
+                <div class="success-icon">✓</div>
+                <h2>Pedido Confirmado</h2>
                 
                 <div class="order-details">
                     <h3>Detalles de tu Pedido</h3>
@@ -196,17 +194,15 @@
         </div>
     </div>
 
-    <!-- PANTALLA 7: MIS ÓRDENES -->
     <div id="ordersScreen" class="screen">
         <div class="container">
             <header class="app-header">
-                <button id="backToStoresFromOrders" class="btn-back">← Volver a Tiendas</button>
-                <h2>📋 Mis Órdenes</h2>
+                <button id="backToStoresFromOrders" class="btn-back">Volver a Restaurantes</button>
+                <h2>Mis Órdenes</h2>
                 <button id="refreshOrders" class="btn-secondary">Actualizar</button>
             </header>
             
             <div id="ordersContainer">
-                <!-- Las órdenes se cargan aquí con JavaScript -->
             </div>
             
             <div id="ordersMessage" class="message"></div>
@@ -218,13 +214,11 @@
         </div>
     </div>
 
-    <!-- LOADING OVERLAY -->
     <div id="loadingOverlay" class="loading-overlay" style="display: none;">
         <div class="loading-spinner"></div>
         <p>Cargando...</p>
     </div>
 
-    <!-- JavaScript -->
     <script src="/EcoLabs/consumer/index.js"></script>
 </body>
 </html>

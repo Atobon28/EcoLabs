@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tobonsita Rappi - Admin Tienda</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Agregamos esto para debug -->
-    <script>
-        console.log("HTML cargado correctamente");
-    </script>
+    <title>Tobonsita Rappi - Admin Negocio</title>
+    <link rel="stylesheet" href="/EcoLabs/business/styles.css">
 </head>
 <body>
-    <!-- PANTALLA 1: LOGIN -->
+    <nav class="home-nav">
+        <a href="/EcoLabs/public/index.html" class="home-button">Inicio</a>
+    </nav>
+
     <div id="loginScreen" class="pantalla activa">
         <div class="contenedor">
             <div class="caja-login">
-                <h1>🏪 Admin Tienda</h1>
+                <h1>Admin Negocio</h1>
                 <h2>Tobonsita Rappi</h2>
-                <p>Ingresa a tu panel de administración</p>
+                <p>Accede a tu panel de administración empresarial</p>
                 
                 <form id="formLogin">
                     <div class="grupo-input">
-                        <label for="usuario">Usuario de la Tienda:</label>
+                        <label for="usuario">Usuario del Negocio:</label>
                         <input type="text" id="usuario" placeholder="Ejemplo: pizzas_mario" required>
                     </div>
                     
@@ -36,7 +35,7 @@
                 <div id="mensajeLogin" class="mensaje"></div>
                 
                 <div class="ayuda">
-                    <p><strong>Usuarios de prueba:</strong></p>
+                    <p>Usuarios de prueba disponibles:</p>
                     <p>• pizzas_mario / mario123</p>
                     <p>• hambur_express / burger456</p>
                 </div>
@@ -44,38 +43,35 @@
         </div>
     </div>
 
-    <!-- PANTALLA 2: DASHBOARD PRINCIPAL -->
     <div id="dashboardScreen" class="pantalla">
         <div class="contenedor">
-            <!-- Encabezado del dashboard -->
             <header class="encabezado-app">
                 <div class="info-tienda">
-                    <h2 id="nombreTienda">Mi Tienda</h2>
-                    <p id="descripcionTienda">Dashboard de administración</p>
+                    <h2 id="nombreTienda">Mi Negocio</h2>
+                    <p id="descripcionTienda">Panel de administración</p>
                 </div>
                 <div class="controles-encabezado">
-                    <span class="estado-tienda" id="estadoTienda">Estado: Cerrada</span>
+                    <span class="estado-tienda" id="estadoTienda">Estado: Cerrado</span>
                     <button id="botonCerrarSesion" class="boton-salir">Cerrar Sesión</button>
                 </div>
             </header>
 
-            <!-- Panel de controles principales -->
             <div class="panel-controles">
                 <div class="tarjeta-control">
-                    <h3>🔄 Estado de la Tienda</h3>
-                    <p>Controla si tu tienda está disponible para recibir pedidos</p>
-                    <button id="botonAbrirCerrar" class="boton-principal">Abrir Tienda</button>
+                    <h3>Estado del Negocio</h3>
+                    <p>Controla la disponibilidad de tu establecimiento para recibir pedidos</p>
+                    <button id="botonAbrirCerrar" class="boton-principal">Abrir Negocio</button>
                 </div>
 
                 <div class="tarjeta-control">
-                    <h3>📋 Órdenes Pendientes</h3>
-                    <p>Revisa los pedidos que están esperando tu confirmación</p>
+                    <h3>Órdenes Pendientes</h3>
+                    <p>Revisa y gestiona los pedidos que requieren tu atención</p>
                     <button id="botonVerOrdenes" class="boton-secundario">Ver Órdenes</button>
                 </div>
 
                 <div class="tarjeta-control">
-                    <h3>🍕 Agregar Producto</h3>
-                    <p>Añade nuevos productos al menú de tu tienda</p>
+                    <h3>Agregar Producto</h3>
+                    <p>Amplía tu catálogo con nuevos productos gastronómicos</p>
                     <button id="botonAgregarProducto" class="boton-secundario">Nuevo Producto</button>
                 </div>
             </div>
@@ -84,45 +80,42 @@
         </div>
     </div>
 
-    <!-- PANTALLA 3: ÓRDENES PENDIENTES -->
     <div id="ordenesScreen" class="pantalla">
         <div class="contenedor">
             <header class="encabezado-app">
-                <button id="volverDashboard1" class="boton-volver">← Volver</button>
-                <h2>📋 Órdenes Pendientes</h2>
+                <button id="volverDashboard1" class="boton-volver">Volver</button>
+                <h2>Órdenes Pendientes</h2>
                 <button id="actualizarOrdenes" class="boton-secundario">Actualizar</button>
             </header>
 
             <div id="contenedorOrdenes" class="lista-ordenes">
-                <!-- Las órdenes se cargan aquí con JavaScript -->
             </div>
 
             <div id="mensajeOrdenes" class="mensaje"></div>
 
             <div id="sinOrdenes" class="estado-vacio" style="display: none;">
-                <p>🎉 No hay órdenes pendientes</p>
-                <p>Cuando lleguen nuevos pedidos aparecerán aquí</p>
+                <p>No hay órdenes pendientes</p>
+                <p>Los nuevos pedidos aparecerán aquí para su gestión</p>
             </div>
         </div>
     </div>
 
-    <!-- PANTALLA 4: CREAR PRODUCTO -->
     <div id="productoScreen" class="pantalla">
         <div class="contenedor">
             <header class="encabezado-app">
-                <button id="volverDashboard2" class="boton-volver">← Volver</button>
-                <h2>🍕 Crear Nuevo Producto</h2>
+                <button id="volverDashboard2" class="boton-volver">Volver</button>
+                <h2>Crear Nuevo Producto</h2>
             </header>
 
             <form id="formProducto" class="formulario-producto">
                 <div class="grupo-input">
                     <label for="nombreProducto">Nombre del Producto:</label>
-                    <input type="text" id="nombreProducto" placeholder="Ejemplo: Pizza Napolitana" required>
+                    <input type="text" id="nombreProducto" placeholder="Ejemplo: Pan Artesanal de Centeno" required>
                 </div>
 
                 <div class="grupo-input">
                     <label for="descripcionProducto">Descripción:</label>
-                    <textarea id="descripcionProducto" placeholder="Describe los ingredientes y características del producto" required></textarea>
+                    <textarea id="descripcionProducto" placeholder="Describe los ingredientes, preparación y características especiales" required></textarea>
                 </div>
 
                 <div class="grupo-input">
@@ -134,6 +127,7 @@
                     <label for="categoriaProducto">Categoría:</label>
                     <select id="categoriaProducto" required>
                         <option value="">Selecciona una categoría</option>
+                        <option value="Panadería">Panadería</option>
                         <option value="Pizza">Pizza</option>
                         <option value="Hamburguesa">Hamburguesa</option>
                         <option value="Bebida">Bebida</option>
@@ -160,13 +154,11 @@
         </div>
     </div>
 
-    <!-- OVERLAY DE CARGA -->
     <div id="overlayLoading" class="overlay-loading" style="display: none;">
         <div class="spinner-loading"></div>
-        <p>Cargando...</p>
+        <p>Procesando...</p>
     </div>
 
-    <!-- JavaScript -->
-    <script src="index.js"></script>
+    <script src="/EcoLabs/business/index.js"></script>
 </body>
 </html>

@@ -3,97 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tobonsita Rappi - Sistema de Delivery</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tobonsita Rappi - Sistema de Delivery Premium</title>
+    <link rel="stylesheet" href="/EcoLabs/public/styles.css">
+    <link rel="icon" type="image/png" href="/EcoLabs/public/Logo.png">
 </head>
 <body>
     <div class="container">
-        <!-- Encabezado con logo -->
         <header class="header">
-            <div class="logo-container">
-                <h1 class="logo">🍕 Tobonsita Rappi 🚗</h1>
-                <p class="slogan">Tu sistema de delivery favorito</p>
+            <div class="container">
+                <div class="logo-section">
+                    <div class="logo-circle">
+                        <span class="logo-text">TR</span>
+                    </div>
+                    <h1 class="brand-name">Tobonsita Rappi</h1>
+                    <p class="brand-subtitle">Sistema de Delivery Premium</p>
+                    <p class="brand-description">
+                        Conectamos sabores excepcionales con experiencias de entrega sin igual. 
+                        Una plataforma gastronómica que eleva el estándar del delivery.
+                    </p>
+                </div>
             </div>
         </header>
 
-        <!-- Contenido principal con opciones -->
         <main class="main-content">
-            <div class="welcome-section">
-                <h2>¿Qué quieres hacer hoy?</h2>
-                <p>Elige tu aplicación para comenzar</p>
-            </div>
+            <div class="container">
+                <section class="welcome-section">
+                    <h2 class="welcome-title">Elige tu experiencia</h2>
+                    <p class="welcome-text">
+                        Selecciona la aplicación que mejor se adapte a tus necesidades y comienza 
+                        tu jornada gastronómica en nuestro ecosistema premium de delivery
+                    </p>
+                </section>
 
-            <!-- Grid de aplicaciones -->
-            <div class="apps-grid">
-                
-                <!-- App Consumidor -->
-                <div class="app-card consumer-card">
-                    <div class="app-icon">🛒</div>
-                    <h3>Pedir Comida</h3>
-                    <p>Explora tiendas, revisa menús y haz tu pedido favorito</p>
-                    <div class="features">
-                        <span class="feature">• Ver tiendas</span>
-                        <span class="feature">• Hacer pedidos</span>
-                        <span class="feature">• Seguir entregas</span>
+                <div class="apps-grid">
+                    <div class="app-card consumer-card">
+                        <div class="app-icon">C</div>
+                        <h3 class="app-title">Ordenar Comida</h3>
+                        <p class="app-description">
+                            Explora nuestro catálogo curado de restaurantes premium, revisa menús 
+                            cuidadosamente seleccionados y realiza pedidos con la máxima comodidad 
+                            y elegancia gastronómica.
+                        </p>
+                        
+                        <div class="features-list">
+                            <span class="feature-item">Explorar restaurantes cercanos</span>
+                            <span class="feature-item">Revisar menús detallados</span>
+                            <span class="feature-item">Realizar pedidos personalizados</span>
+                            <span class="feature-item">Seguimiento en tiempo real</span>
+                            <span class="feature-item">Historial de órdenes completo</span>
+                        </div>
+                        
+                        <a href="/EcoLabs/consumer/index.html" class="app-button">Acceder como Cliente</a>
                     </div>
-                    <a href="/EcoLabs/consumer/index.html" class="app-button consumer-btn">
-                        Entrar como Cliente
-                    </a>
-                </div>
 
-                <!-- App Tienda -->
-                <div class="app-card store-card">
-                    <div class="app-icon">🏪</div>
-                    <h3>Mi Negocio</h3>
-                    <p>Administra tu tienda, productos y órdenes de clientes</p>
-                    <div class="features">
-                        <span class="feature">• Gestionar menú</span>
-                        <span class="feature">• Ver órdenes</span>
-                        <span class="feature">• Abrir/cerrar tienda</span>
+                    <div class="app-card store-card">
+                        <div class="app-icon">T</div>
+                        <h3 class="app-title">Administrar Negocio</h3>
+                        <p class="app-description">
+                            Gestiona tu establecimiento gastronómico de manera profesional y eficiente. 
+                            Controla inventario, procesa pedidos y mantén tu negocio siempre activo 
+                            en nuestra plataforma premium.
+                        </p>
+                        
+                        <div class="features-list">
+                            <span class="feature-item">Panel de control completo</span>
+                            <span class="feature-item">Gestión de menú y productos</span>
+                            <span class="feature-item">Administración de pedidos</span>
+                            <span class="feature-item">Control de disponibilidad</span>
+                            <span class="feature-item">Estadísticas de ventas</span>
+                        </div>
+                        
+                        <a href="/EcoLabs/business/index.html" class="app-button">Acceder como Negocio</a>
                     </div>
-                    <a href="/EcoLabs/business/index.html" class="app-button store-btn">
-                        Entrar como Tienda
-                    </a>
-                </div>
 
-                <!-- App Repartidor -->
-                <div class="app-card courier-card">
-                    <div class="app-icon">🚴‍♂️</div>
-                    <h3>Hacer Entregas</h3>
-                    <p>Ve órdenes disponibles y gana dinero entregando</p>
-                    <div class="features">
-                        <span class="feature">• Ver órdenes disponibles</span>
-                        <span class="feature">• Aceptar entregas</span>
-                        <span class="feature">• Ganar dinero</span>
+                    <div class="app-card courier-card">
+                        <div class="app-icon">R</div>
+                        <h3 class="app-title">Realizar Entregas</h3>
+                        <p class="app-description">
+                            Únete a nuestro equipo de repartidores profesionales y forma parte de 
+                            la experiencia premium. Genera ingresos entregando momentos gastronómicos 
+                            excepcionales a nuestros clientes.
+                        </p>
+                        
+                        <div class="features-list">
+                            <span class="feature-item">Órdenes disponibles en tiempo real</span>
+                            <span class="feature-item">Sistema de asignación inteligente</span>
+                            <span class="feature-item">Seguimiento de entregas</span>
+                            <span class="feature-item">Gestión de ganancias</span>
+                            <span class="feature-item">Soporte 24/7 disponible</span>
+                        </div>
+                        
+                        <a href="/EcoLabs/courier/index.html" class="app-button">Acceder como Repartidor</a>
                     </div>
-                    <a href="/EcoLabs/courier/index.html" class="app-button courier-btn">
-                        Entrar como Repartidor
-                    </a>
                 </div>
 
-            </div>
-
-            <!-- Información adicional -->
-            <div class="info-section">
-                <div class="info-card">
-                    <h4>🚀 Navegación rápida</h4>
-                    <p>Haz clic en cualquier tarjeta para acceder directamente a la aplicación</p>
-                </div>
-                
-                <div class="info-card">
-                    <h4>📱 Compatibilidad total</h4>
-                    <p>Funciona en cualquier navegador y dispositivo</p>
-                </div>
+                <section class="info-section">
+                    <div class="info-card">
+                        <h4>Navegación Rápida</h4>
+                        <p>
+                            Acceso directo desde cualquier aplicación. Nuestro sistema permite 
+                            navegar fluidamente entre todas las plataformas con un solo clic.
+                        </p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Compatibilidad Total</h4>
+                        <p>
+                            Funciona perfectamente en cualquier navegador y dispositivo. 
+                            Diseño responsive que se adapta a tu pantalla para una experiencia óptima.
+                        </p>
+                    </div>
+                </section>
             </div>
         </main>
 
-        <!-- Footer -->
         <footer class="footer">
-            <div class="footer-content">
-                <p>&copy; 2025 Tobonsita Rappi - Desarrollado por Ana Sofia Tobon</p>
-                <p class="version">Versión 2.0.0 - HTML Puro</p>
+            <div class="container">
+                <div class="footer-content">
+                    <p class="footer-text">
+                        &copy; 2025 Tobonsita Rappi - Desarrollado por Ana Sofia Tobon
+                    </p>
+                    <p class="footer-version">
+                        Versión 2.0.0 - Sistema Premium de Delivery Gastronómico
+                    </p>
+                </div>
             </div>
         </footer>
     </div>
+
+    <script>
+        document.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            const scrolled = window.pageYOffset;
+            const speed = scrolled * 0.5;
+            
+            if (scrolled < window.innerHeight) {
+                header.style.transform = `translateY(${speed}px)`;
+            }
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.app-card, .info-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        const logoCircle = document.querySelector('.logo-circle');
+        logoCircle.addEventListener('mouseenter', () => {
+            logoCircle.style.transform = 'scale(1.05) rotate(5deg)';
+        });
+        
+        logoCircle.addEventListener('mouseleave', () => {
+            logoCircle.style.transform = 'scale(1) rotate(0deg)';
+        });
+    </script>
 </body>
 </html>
