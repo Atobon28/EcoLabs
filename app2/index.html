@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App 2</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles.css">
     <link
         href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAD//wAAKysrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREREREREREREREREREAAAAAAAAREQEREREREBERAQAAAAAQEREBAAAAABAREQEBEAEQEBERAQEQARAQEREBARABEBAREQEBEAEQEBERAQAAAAAQEREBAAAAABAREQEREREREBERAAAAAAAAEREREREREREREREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -12,18 +12,30 @@
 </head>
 
 <body>
+    <!-- Pantalla principal del juego -->
     <div id="screen1">
-        <h2>Screen 1</h2>
-        <p>Hello from screen 1</p>
+        <div class="game">
+            <div id="status">Conectando...</div>
+            
+            <div id="choices" style="display: none;">
+                <button onclick="play('rock')">🪨</button>
+                <button onclick="play('paper')">📄</button>
+                <button onclick="play('scissors')">✂️</button>
+            </div>
+        </div>
     </div>
+
+    <!-- Pantalla de resultados -->
     <div id="screen2">
-        <h2>Screen 2</h2>
-        <p>Hello from screen 2</p>
-        <button id="go-screen-back">Go to previous screen</button>
+        <div class="result">
+            <div id="message"></div>
+            <div id="details"></div>
+            <button id="go-screen-back">Otra vez</button>
+        </div>
     </div>
 
     <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
-    <script src="index.js"></script>
+    <script src="/app2/index.js"></script>
 
 </body>
 
