@@ -1,14 +1,11 @@
-let users = [
-  {
-    id: 1,
-    name: "John Doe",
-  },
-];
-
 const supabaseCli = require("../services/supabase.service");
 
-const getAllUsers = async () => {
-  const { data, error } = await supabaseCli.from("users").select();
+// GET /users/basic → username y email de todos los usuarios
+const getUsersBasic = async () => {
+  const { data, error } = await supabaseCli
+    .from("users")
+    .select("username, email");
+
   if (error) {
     console.error(error);
     return error;
@@ -16,6 +13,17 @@ const getAllUsers = async () => {
   return data;
 };
 
+// Función existente para traer todos los usuarios
+const getAllUsers = async () => {
+  const { data, error } = await supabaseCli.from("users").select("*");
+  if (error) {
+    console.error(error);
+    return error;
+  }
+  return data;
+};
+
+// Función existente para crear usuario
 const createUserInDB = async (user) => {
   const { data, error } = await supabaseCli
     .from("users")
@@ -30,6 +38,7 @@ const createUserInDB = async (user) => {
   return data;
 };
 
+// Función existente para actualizar usuario
 const updateUserInDb = async (newData, userId) => {
   const { data, error } = await supabaseCli
     .from("users")
@@ -44,6 +53,7 @@ const updateUserInDb = async (newData, userId) => {
   return data;
 };
 
+// Función existente para eliminar usuario
 const deleteUserInDb = async (userId) => {
   const { data, error } = await supabaseCli
     .from("users")
@@ -60,6 +70,7 @@ const deleteUserInDb = async (userId) => {
 
 module.exports = {
   getAllUsers,
+  getUsersBasic,
   createUserInDB,
   updateUserInDb,
   deleteUserInDb,

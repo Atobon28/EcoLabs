@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoLabs API Demo</title>
+    <style>
+      :root { --bg:#0f172a; --panel:#111827; --card:#1f2937; --text:#e5e7eb; --muted:#9ca3af; --accent:#22d3ee; }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: linear-gradient(120deg, #0f172a, #111827); color: var(--text); }
+      header { padding: 16px 24px; border-bottom: 1px solid #1f2937; background: rgba(17,24,39,.7); position: sticky; top: 0; backdrop-filter: blur(6px); }
+      h1 { margin: 0; font-size: 18px; letter-spacing: .3px; }
+      main { display: grid; grid-template-columns: 340px 1fr; gap: 16px; padding: 16px; align-items: start; }
+      @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+      .panel { background: rgba(31,41,55,.7); border: 1px solid #374151; border-radius: 12px; padding: 14px; }
+      .group { display: grid; gap: 8px; margin-bottom: 12px; }
+      .group h2 { margin: 0; font-size: 14px; color: var(--muted); font-weight: 600; letter-spacing:.2px; }
+      .controls { display: grid; gap: 8px; }
+      .row { display: flex; gap: 8px; flex-wrap: wrap; }
+      button { appearance: none; border: 1px solid #374151; background: #0b1220; color: var(--text); padding: 8px 12px; border-radius: 10px; cursor: pointer; transition: .15s ease; font-weight: 600; font-size: 13px; }
+      button:hover { border-color: #4b5563; transform: translateY(-1px); }
+      button:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+      .accent { border-color: #155e75; background: #042028; }
+      label { font-size: 12px; color: var(--muted); }
+      input, select { background: #0b1220; border: 1px solid #374151; color: var(--text); padding: 8px 10px; border-radius: 10px; outline: none; width: 100%; font-size: 13px; }
+      .output { min-height: 300px; white-space: pre-wrap; overflow: auto; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background: #0b1220; border: 1px solid #374151; border-radius: 12px; padding: 12px; line-height: 1.4; }
+      .toolbar { display: flex; gap: 8px; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+      .right { display: flex; gap: 8px; align-items: center; }
+      .chip { border: 1px dashed #334155; padding: 2px 8px; border-radius: 999px; font-size: 11px; color: #cbd5e1; }
+      .success { color: #22c55e; }
+      .error { color: #ef4444; }
+      .muted { color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>EcoLabs – Consultas a la API</h1>
+    </header>
+    <main>
+      <section class="panel">
+        <div class="group">
+          <h2>Products</h2>
+          <div class="controls">
+            <div class="row">
+              <button id="btn-products-all" class="accent">Traer todos los products</button>
+              <button id="btn-products-lt50">Price < 50</button>
+              <button id="btn-products-adv">> 30 y category=Electronics</button>
+              <button id="btn-products-first10">Primeros 10 (limit/offset)</button>
+            </div>
+            <div class="row">
+              <label for="input-user-id" style="width:100%">Products del usuario</label>
+              <input id="input-user-id" placeholder="Ingresa user_id (ej. 1)" />
+              <button id="btn-products-by-user">Filtrar por user_id</button>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <h2>Users</h2>
+          <div class="controls">
+            <div class="row">
+              <button id="btn-users-fields">Solo username y email</button>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <h2>Orders</h2>
+          <div class="controls">
+            <div class="row">
+              <button id="btn-orders-sorted">Órdenes por fecha ↓</button>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <h2>Posts</h2>
+          <div class="controls">
+            <div class="row">
+              <button id="btn-posts-like">Title contiene "tutorial"</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="toolbar">
+          <div class="chip" id="status">Listo</div>
+          <div class="right">
+            <button id="btn-clear">Limpiar</button>
+            <button id="btn-copy">Copiar JSON</button>
+          </div>
+        </div>
+        <div class="output" id="output">Pulsa un botón para consultar la API…</div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html> 
